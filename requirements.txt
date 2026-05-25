@@ -1,0 +1,6 @@
+pandas
+pydantic
+reportlab
+PyPDF2
+streamlit
+pytest

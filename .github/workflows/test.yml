@@ -14,12 +14,12 @@ jobs:
       USE_MOCK_MODEL: true
       MOCK_DATA: true
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run pytest
-        run: pytest --tb=short
+        run: PYTHONPATH=. pytest --tb=short
